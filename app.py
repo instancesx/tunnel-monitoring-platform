@@ -34,14 +34,14 @@ import streamlit as st
 # 1. 页面基础设置
 # =========================
 st.set_page_config(
-    page_title="隧道监测数据交互界面",
+    page_title="隧道监测变形数据交互界面",
     layout="wide"
 )
 
 st.title("隧道监测变形数据交互界面")
 
-DEFAULT_FILE_PATH = r"D:\jupyter\pingtai\data.xlsx"
-LAYOUT_IMAGE_PATH = r"D:\jupyter\pingtai\tunnel_layout.png"
+DEFAULT_FILE_PATH = "data.xlsx"
+LAYOUT_IMAGE_PATH = "tunnel_layout.png"
 LAYOUT_IMAGE_WIDTH = 900   # 布置图显示宽度，可按需要改成 700、800、1000
 
 
