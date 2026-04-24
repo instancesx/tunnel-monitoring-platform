@@ -267,9 +267,13 @@ def filter_raw_data(raw_df, time_col, column_map, selected_mileage, selected_loc
 
 def get_y_axis_title(selected_sheet, selected_locations):
     """
-    纵坐标标题
+    修正点：
+    只要当前数据表名里包含“速率”，就显示“变形速率（mm/d）”
     """
-    if any("速率" in str(x) for x in selected_locations) or "Sheet2" in str(selected_sheet):
+    sheet_text = str(selected_sheet).strip()
+    location_text = " ".join([str(x).strip() for x in selected_locations])
+
+    if "速率" in sheet_text or "速率" in location_text:
         return "变形速率（mm/d）"
     return "变形量（mm）"
 
